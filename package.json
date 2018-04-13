@@ -1,0 +1,39 @@
+{
+	"name": "samuel_silva",
+	"version": "0.0.1",
+	"description": "A simple project to test my skills to apply a new job :D",
+	"main": "app.js",
+	"scripts": {
+		"test": "npm teste"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@bitbucket.org/samuelsilvawb/samuel_silva.git"
+	},
+	"keywords": [
+		"javascript",
+		"css",
+		"html",
+		"npm",
+		"git"
+	],
+	"author": "Samuel Silva",
+	"license": "MIT",
+	"homepage": "https://bitbucket.org/samuelsilvawb/samuel_silva#readme",
+	"devDependencies": {
+		"gulp": "3.9.1",
+		"gulp-autoprefixer": "3.1.1",
+		"gulp-babel": "7.0.1",
+		"gulp-clean-css": "3.9.3",
+		"gulp-concat": "2.6.1",
+		"gulp-imagemin": "3.1.1",
+		"gulp-plumber": "1.1.0",
+		"gulp-sass": "3.1.0",
+		"gulp-sequence": "0.4.6",
+		"gulp-shell": "0.5.2",
+		"gulp-sourcemaps": "2.4.1",
+		"gulp-uglify": "2.0.1",
+		"run-sequence": "2.2.1",
+		"vinyl-source-stream": "2.0.0"
+	}
+}
