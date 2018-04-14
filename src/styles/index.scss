@@ -1,0 +1,39 @@
+.page {
+    background-color: $primary-color;
+    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    &__content {
+        margin: 5vh auto;
+        width: 80%;
+        &__header {
+            background-color: $secondary-color;
+            height: 20vh;
+        }
+        &__navbar {
+            background-color: $secondary-color;
+            box-shadow: 0px 0px 5px 0px rgba(212, 217, 218, 0.8392156862745098);
+            margin-top: .5vh;
+            height: 8vh;
+        }
+        &__informations {
+            background-color: $secondary-color;
+            box-shadow: 0px 0px 5px 0px rgba(212, 217, 218, 0.8392156862745098);
+            margin-top: 5vh;
+            height: 50vh;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .page {
+        &__content {
+            margin: 0;
+            width: 100%;
+            &__header {
+                background-color: $primary-color;
+                min-height: 50vh;
+            }
+        }
+    }
+}
