@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Cyza Test</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 	<link rel="stylesheet" href="./../dist/styles/app.css">
 </head>
 
@@ -13,10 +15,58 @@
 	<div class="page">
 		<div class="page__content">
 			<header class="page__content__header">
+				<div class="page__content__header__buttons">
+					<div class="button-profile">
+						<button class="button-profile__cover-image">
+							<i class="ion-ios-camera"></i> Upload Cover Image
+						</button>
+						<button class="button-profile__log-out">
+							log out
+						</button>
+					</div>
+				</div>
 				<div class="profile">
+					<img class="profile__image" src="./images/profile_image.jpg" alt="Profile Image">
+
+					<div class="profile__infos-user">
+						<ul>
+							<li class="profile__name profile__name--strong">Jessica Parker</li>
+							<li class="profile__location">
+								<i class="ion-ios-location-outline"></i> Newport Beach, CA
+							</li>
+							<li>
+								<i class="ion-ios-telephone-outline"></i> (123) 123 - 4568
+							</li>
+						</ul>
+					</div>
+					<div class="profile__infos-extra">
+						<span class="profile__infos-extra__stars">
+							<i class="ion-star"></i>
+							<i class="ion-star"></i>
+							<i class="ion-star"></i>
+							<i class="ion-star"></i>
+							<i class="ion-ios-star-outline"></i>
+							<span>6 Reviews</span>
+						</span>
+						<span class="nav__followers--mobile">
+							<i class="ion-plus-circled"></i>
+							<span>15 Followers</span>
+						</span>
+					</div>
 				</div>
 			</header>
-			<nav class="page__content__navbar">			
+			<nav class="page__content__navbar">
+				<ul class="nav__list">
+					<li class="nav__list__item nav__list__item--active">about</li>
+					<li class="nav__list__item">settings</li>
+					<li class="nav__list__item">option 1</li>
+					<li class="nav__list__item">option 2</li>
+					<li class="nav__list__item">option 3</li>
+				</ul>
+				<span class="nav__followers">
+					<i class="ion-plus-circled"></i>
+					<span>15 Followers</span>
+				</span>
 			</nav>
 			<section class="page__content__informations">
 			</section>

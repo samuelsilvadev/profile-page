@@ -1,3 +1,19 @@
 @import './_variables';
 @import './_reset';
 @import './index';
+@import './profile';
+@import './navbar';
+* {
+	font-family: 'Open Sans', sans-serif;
+	transition: all 0.5s;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+}
+
+button:focus {
+	border: none;
+    outline: 0;
+}
