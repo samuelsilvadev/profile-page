@@ -17,7 +17,7 @@ const runSequence = require('run-sequence');
 gulp.task('browserSync', () => {
 	browserSync({
 		server: {
-			baseDir: "./src/"
+			baseDir: "./dist/"
 		},
 		notify: false
 	});
@@ -37,7 +37,7 @@ gulp.task('images-deploy', () => {
 });
 
 gulp.task('styles', () => {
-	return gulp.src('./styles/main.scss')
+	return gulp.src('./src/styles/main.scss')
 		.pipe(plumber({
 			errorHandler: (err) => {
 				console.log(err);
@@ -56,9 +56,9 @@ gulp.task('styles', () => {
 			cascade: true
 		}))
 		.on('error', console.error)
-		.pipe(concat('styles.css'))
+		.pipe(concat('app.css'))
 		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('./dist/styles'))
+		.pipe(gulp.dest('./dist/styles/'))
 		.pipe(browserSync.reload({ stream: true }));
 });
 
@@ -73,7 +73,7 @@ gulp.task('styles-deploy', () => {
 		.pipe(autoprefixer({
 			cascade: true
 		}))
-		.pipe(concat('styles.css'))
+		.pipe(concat('app.css'))
 		.pipe(minifyCSS())
 		.pipe(gulp.dest('./dist/styles'));
 });
@@ -82,6 +82,7 @@ gulp.task('html', () => {
 	return gulp.src('./src/*.html')
 		.pipe(plumber())
 		.pipe(browserSync.reload({ stream: true }))
+		.pipe(gulp.dest('./dist'))
 		.on('error', console.error);
 });
 
@@ -110,7 +111,7 @@ gulp.task('scaffold', () => {
 	]);
 });
 
-gulp.task('default', ['browserSync', 'styles'], () => {
+gulp.task('default', ['browserSync', 'html', 'styles'], () => {
 	gulp.watch('./src/styles/**', ['styles']);
 	gulp.watch('./src/images/**', ['images']);
 	gulp.watch('./src/*.html', ['html']);
