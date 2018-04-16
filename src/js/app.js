@@ -1,7 +1,8 @@
 import { addEventLinks } from './navbar';
+import { showEdit } from './edit'
 
-
-;(function () {
-	addEventLinks();	
+;(function init() {
+	window.showEdit = showEdit;		
+	addEventLinks();
 })();
 
