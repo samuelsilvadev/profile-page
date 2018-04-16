@@ -79,7 +79,19 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _navbar = __webpack_require__(/*! ./navbar */ \"./src/js/navbar.js\");\n\n;\n\n(function () {\n  (0, _navbar.addEventLinks)();\n})();\n\n//# sourceURL=webpack:///./src/js/app.js?");
+eval("\n\nvar _navbar = __webpack_require__(/*! ./navbar */ \"./src/js/navbar.js\");\n\nvar _edit = __webpack_require__(/*! ./edit */ \"./src/js/edit.js\");\n\n(function init() {\n  window.showEdit = _edit.showEdit;\n  (0, _navbar.addEventLinks)();\n})();\n\n//# sourceURL=webpack:///./src/js/app.js?");
+
+/***/ }),
+
+/***/ "./src/js/edit.js":
+/*!************************!*\
+  !*** ./src/js/edit.js ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.showEdit = void 0;\n\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\nvar _buildDivEdit = function _buildDivEdit(title, value, type) {\n  return \"<div data-js=\\\"box-edit\\\" class=\\\"box-edit\\\">\\n\\t\\t<h5 class=\\\"box-edit__title\\\">\".concat(title, \"</h5>\\n\\t\\t<form>\\n\\t\\t\\t<input data-js=\\\"input-edit\\\" type=\\\"text\\\" class=\\\"box-edit__field\\\" value=\\\"\").concat(value, \"\\\">\\n\\t\\t\\t<button type=\\\"button\\\" data-js=\\\"btn-update\\\" data-js-type=\\\"\").concat(type, \"\\\" class=\\\"box-edit__button\\\">SAVE</button>\\n\\t\\t\\t<button type=\\\"button\\\" data-js=\\\"btn-cancel-update\\\" class=\\\"box-edit__button box-edit__button--nocolor\\\">CANCEL</button>\\n\\t\\t</form>\\n\\t</div>\");\n};\n\nvar _titleTypes = {\n  city: 'CITY, STATE & ZIP',\n  phone: 'PHONE NUMBER',\n  site: 'PERSONAL SITE',\n  name: 'NAME'\n};\n\nvar save = function save(el) {\n  var elstoUpdate = _toConsumableArray(document.querySelectorAll(el));\n\n  var newValue = document.querySelector('[data-js=\"input-edit\"]').value || '';\n  elstoUpdate.forEach(function (el) {\n    return el.textContent = newValue;\n  });\n};\n\nvar cancelEdit = function cancelEdit() {\n  var boxs = _toConsumableArray(document.querySelectorAll('[data-js=\"box-edit\"]'));\n\n  boxs.forEach(function (box) {\n    return box.remove();\n  });\n};\n\nvar addEventInButtons = function addEventInButtons() {\n  var btnupdate = document.querySelector('[data-js=\"btn-update\"]');\n  var btnCancelupdate = document.querySelector('[data-js=\"btn-cancel-update\"]');\n  btnupdate.addEventListener('click', function () {\n    save(\"[data-js-value=\\\"\".concat(this.dataset.jsType, \"\\\"]\"));\n    cancelEdit();\n  }, false);\n  btnCancelupdate.addEventListener('click', cancelEdit, false);\n};\n\nvar showEdit = function showEdit(type) {\n  cancelEdit();\n  var elementView = document.querySelector(\"[data-js='\".concat(type, \"']\"));\n  var title = _titleTypes[type];\n  var value = elementView ? elementView.textContent.trim() : '';\n  elementView.innerHTML += _buildDivEdit(title, value, type);\n  window.setTimeout(function () {\n    addEventInButtons();\n  }, 1000);\n};\n\nexports.showEdit = showEdit;\n\n//# sourceURL=webpack:///./src/js/edit.js?");
 
 /***/ }),
 
