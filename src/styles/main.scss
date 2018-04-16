@@ -6,8 +6,8 @@
 @import './about';
 @import './settings';
 * {
-	font-family: 'Open Sans', sans-serif;
-	transition: all 0.5s;
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s;
 }
 
 img {
@@ -15,7 +15,12 @@ img {
     max-width: 100%;
 }
 
+button {
+    cursor: pointer;
+}
+
 button:focus {
-	border: none;
+    border: none;
+    cursor: pointer;
     outline: 0;
 }
