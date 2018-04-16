@@ -72,7 +72,9 @@
             text-align: center;
         }
         &__image {
+            height: 120px;
             position: static;
+            width: 120px;
         }
         &__infos-user>ul li {
             padding-bottom: 10px;
@@ -80,6 +82,7 @@
         &__infos-extra {
             padding-left: 2%;
             &__stars {
+                color: $color-button-logout;
                 padding-bottom: 10px;
             }
         }

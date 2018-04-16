@@ -17,7 +17,11 @@
             background-color: $color-personal-info-icon;
             cursor: pointer;
             display: inline-block;
-            padding: 2%;
+			padding: 2%;
+			width: 25px;
+			&:hover {
+				background-color: $color-button-logout;
+			}
         }
     }
 }

@@ -34,7 +34,13 @@
 @media screen and ($breakpoint-phones) {
     .nav__list {
 		margin-left: 0;
-		padding-top: 10px;
+		padding-top: 0px;
+		white-space: nowrap;
+		&__item { 
+			padding-left: 1px;
+			padding-right: 1px;
+			padding-top: 22px;
+		}
     }
     .nav__followers {
         display: none;
