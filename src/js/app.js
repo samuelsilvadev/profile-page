@@ -1,8 +1,9 @@
 import { addEventLinks } from './navbar';
-import { showEdit } from './edit'
+import { showEdit, transformToInputs } from './edit'
 
-;(function init() {
-	window.showEdit = showEdit;		
-	addEventLinks();
-})();
+	; (function init() {
+		window.showEdit = showEdit;
+		window.transformToInputs = transformToInputs;
+		addEventLinks();
+	})();
 

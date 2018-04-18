@@ -1,9 +1,16 @@
 <section class="about">
-	ABOUT
+	<header class="about__header">
+		<h3 class="about__title">
+			ABOUT
+		</h3>
+		<span class="about__icon-edit about__icon-edit--mobile" onclick="transformToInputs()">
+			<i class="ion-edit"></i>
+		</span>
+	</header>
 	<div class="about__content">
 		<ul class="personal-info">
 			<li data-js="name" class="personal-info__item">
-				<span data-js-value='name'>Jessica Parker</span>
+				<span data-js='input' data-js-value='name' class="personal-info__item__value">Jessica Parker</span>
 				<span class="personal-info__item__icon" onclick="showEdit('name')">
 					<i class="ion-edit"></i>
 				</span>
@@ -11,7 +18,7 @@
 			<br>
 			<li data-js='site' class="personal-info__item">
 				<i class="ion-earth"></i>
-				<span data-js-value='site'>www.seller.com</span>
+				<span data-js='input' data-js-value='site' class="personal-info__item__value">www.seller.com</span>
 				<span class="personal-info__item__icon" onclick="showEdit('site')">
 					<i class="ion-edit"></i>
 				</span>
@@ -19,7 +26,7 @@
 			<br>
 			<li data-js='phone' class="personal-info__item">
 				<i class="ion-ios-telephone-outline"></i>
-				<span data-js-value='phone'>(123) 123 - 4568</span>
+				<span data-js='input' data-js-value='phone' class="personal-info__item__value">(123) 123 - 4568</span>
 				<span class="personal-info__item__icon" onclick="showEdit('phone')">
 					<i class="ion-edit"></i>
 				</span>
@@ -27,7 +34,7 @@
 			<br>
 			<li data-js="city" class="personal-info__item">
 				<i class="ion-ios-home-outline"></i>
-				<span data-js-value='city'>Newport Beach, CA</span>
+				<span data-js='input' data-js-value='city' class="personal-info__item__value">Newport Beach, CA</span>
 				<span class="personal-info__item__icon" onclick="showEdit('city')">
 					<i class="ion-edit"></i>
 				</span>

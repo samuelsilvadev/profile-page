@@ -9,6 +9,10 @@ const _buildDivEdit = (title, value, type) => (
 	</div>`
 );
 
+const _buildInputEdit = value => (
+	`<input data-js="input-edit" type="text" class="box-edit__field" value="${value}">`
+);
+
 const _titleTypes = {
 	city: 'CITY, STATE & ZIP',
 	phone: 'PHONE NUMBER',
@@ -36,6 +40,13 @@ const addEventInButtons = () => {
 		cancelEdit();
 	}, false);
 	btnCancelupdate.addEventListener('click', cancelEdit, false);
+}
+
+export const transformToInputs = () => {
+	const spans = [...document.querySelectorAll('[data-js="input"]')];
+	spans.forEach(span => {
+		span.innerHTML = _buildInputEdit(span.textContent);
+	});
 }
 
 export const showEdit = (type) => {
