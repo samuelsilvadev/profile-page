@@ -42,11 +42,23 @@ const addEventInButtons = () => {
 	btnCancelupdate.addEventListener('click', cancelEdit, false);
 }
 
+const showButtonsEdit = () => {
+	const divButtons = document.querySelector('[data-js="btns-mobile-about"]');
+	divButtons.classList.toggle('about__buttons--hide');
+}
+
+const hideIconEdit = () => {
+	const icon = document.querySelector('[data-js="icon-edit-mobile"]');
+	icon.classList.toggle('about__icon-edit--hide');
+}
+
 export const transformToInputs = () => {
 	const spans = [...document.querySelectorAll('[data-js="input"]')];
 	spans.forEach(span => {
 		span.innerHTML = _buildInputEdit(span.textContent);
 	});
+	hideIconEdit();
+	showButtonsEdit();
 }
 
 export const showEdit = (type) => {

@@ -3,9 +3,17 @@
 		<h3 class="about__title">
 			ABOUT
 		</h3>
-		<span class="about__icon-edit about__icon-edit--mobile" onclick="transformToInputs()">
+		<span data-js="icon-edit-mobile" class="about__icon-edit about__icon-edit--mobile" onclick="transformToInputs()">
 			<i class="ion-edit"></i>
 		</span>
+		<div data-js="btns-mobile-about" class="about__buttons about__buttons--mobile about__buttons--hide">
+			<button>
+				CANCEL
+			</button>
+			<button>
+				SAVE
+			</button>
+		</div>
 	</header>
 	<div class="about__content">
 		<ul class="personal-info">
