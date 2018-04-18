@@ -1,6 +1,6 @@
-# Cyza Test
+# Profile Page
 
-> Project to test my skills and applying a new job :D
+> Project to test my skills in CSS and JS :D
 
 ## How to install
 
@@ -18,6 +18,6 @@
 
 ## License
 
-Samuel Silva &copy; 2018 ...
+Samuel Silva &copy; 2018
 
 
