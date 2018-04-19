@@ -111,7 +111,7 @@ gulp.task('scaffold', () => {
 	]);
 });
 
-gulp.task('default', ['browserSync', 'html', 'styles'], () => {
+gulp.task('default', ['browserSync', 'html', 'styles', 'images'], () => {
 	gulp.watch('./src/styles/**', ['styles']);
 	gulp.watch('./src/images/**', ['images']);
 	gulp.watch('./src/*.html', ['html']);
