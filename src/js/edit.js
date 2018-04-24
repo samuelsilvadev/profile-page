@@ -42,14 +42,30 @@ const addEventInButtons = () => {
 	btnCancelupdate.addEventListener('click', cancelEdit, false);
 }
 
-const showButtonsEdit = () => {
+const addEventInButtonsMobile = () => {
+	const btnupdate = document.querySelector('[data-js="btn-mobile-save"]');
+	const btnCancelupdate = document.querySelector('[data-js="btn-mobile-cancel"');
+
+	btnCancelupdate.addEventListener('click', transformToSpans, false);
+}
+
+const showButtonsEditMobile = () => {
 	const divButtons = document.querySelector('[data-js="btns-mobile-about"]');
 	divButtons.classList.toggle('about__buttons--hide');
 }
 
-const hideIconEdit = () => {
+const hideIconEditMobile = () => {
 	const icon = document.querySelector('[data-js="icon-edit-mobile"]');
 	icon.classList.toggle('about__icon-edit--hide');
+}
+
+const transformToSpans = () => {
+	const spans = [...document.querySelectorAll('[data-js="input"]')];
+	spans.forEach(span => {
+		span.innerHTML = span.children[0].value;
+	});
+	showButtonsEditMobile();
+	hideIconEditMobile();
 }
 
 export const transformToInputs = () => {
@@ -57,8 +73,9 @@ export const transformToInputs = () => {
 	spans.forEach(span => {
 		span.innerHTML = _buildInputEdit(span.textContent);
 	});
-	hideIconEdit();
-	showButtonsEdit();
+	hideIconEditMobile();
+	showButtonsEditMobile();
+	addEventInButtonsMobile();
 }
 
 export const showEdit = (type) => {
