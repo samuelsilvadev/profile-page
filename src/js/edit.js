@@ -9,8 +9,8 @@ const _buildDivEdit = (title, value, type) => (
 	</div>`
 );
 
-const _buildInputEdit = value => (
-	`<input data-js="input-edit" type="text" class="box-edit__field" value="${value}">`
+const _buildInputEdit = (value, type) => (
+	`<input data-js="input-edit" data-js-type="${type}" type="text" class="box-edit__field" value="${value}">`
 );
 
 const _titleTypes = {
@@ -46,6 +46,7 @@ const addEventInButtonsMobile = () => {
 	const btnupdate = document.querySelector('[data-js="btn-mobile-save"]');
 	const btnCancelupdate = document.querySelector('[data-js="btn-mobile-cancel"');
 
+	btnupdate.addEventListener('click', saveMobile, false);
 	btnCancelupdate.addEventListener('click', transformToSpans, false);
 }
 
@@ -68,10 +69,22 @@ const transformToSpans = () => {
 	hideIconEditMobile();
 }
 
+const saveMobile = () => {
+	const allInputs = [...document.querySelectorAll('[data-js="input-edit"]')];
+	allInputs.forEach(editInput => {
+		const newValue = editInput.value || '';
+		const allplacesToupdate = [...document.querySelectorAll(`[data-js-value="${editInput.dataset.jsType}"]`)];
+		allplacesToupdate.forEach(el => el.textContent = newValue);
+	});
+	showButtonsEditMobile();
+	hideIconEditMobile();
+}
+
+
 export const transformToInputs = () => {
 	const spans = [...document.querySelectorAll('[data-js="input"]')];
 	spans.forEach(span => {
-		span.innerHTML = _buildInputEdit(span.textContent);
+		span.innerHTML = _buildInputEdit(span.textContent, span.dataset.jsValue);
 	});
 	hideIconEditMobile();
 	showButtonsEditMobile();
