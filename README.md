@@ -4,11 +4,8 @@
 
 ## How to install
 
-- [sudo] npm install -g gulp
 - npm install
-- npm start 
-...
-
+- npm start
 
 ## Contacts
 
