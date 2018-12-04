@@ -1,4 +1,3 @@
-const path = require('path');
 const merge = require('webpack-merge');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
@@ -11,4 +10,4 @@ module.exports = merge(dev, {
 			test: /\.js($|\?)/i
 		})
 	]
-})
+});
