@@ -22,9 +22,9 @@
 	"license": "MIT",
 	"homepage": "https://bitbucket.org/samuelsilvawb/samuel_silva#readme",
 	"devDependencies": {
-		"@babel/core": "7.0.0-beta.44",
+		"@babel/core": "7.20.7",
 		"@babel/preset-env": "7.0.0-beta.44",
-		"babel-loader": "8.0.0-beta.2",
+		"babel-loader": "8.3.0",
 		"browser-sync": "^2.26.3",
 		"gulp": "^4.0.0",
 		"gulp-autoprefixer": "3.1.1",
@@ -38,8 +38,8 @@
 		"gulp-shell": "0.5.2",
 		"gulp-sourcemaps": "2.4.1",
 		"uglifyjs-webpack-plugin": "1.2.4",
-		"webpack": "4.5.0",
-		"webpack-cli": "^3.1.2",
+		"webpack": "5.75.0",
+		"webpack-cli": "^5.0.1",
 		"webpack-merge": "4.1.2"
 	}
 }
